@@ -11,7 +11,7 @@ export default function EditPost() {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/post/`+id).then((res) => {
+    fetch(`https://mycarblogbackend02072023.onrender.com/post/`+id).then((res) => {
       res.json().then((postInfo) => {
         setTitle(postInfo.title);
         setContent(postInfo.content);
