@@ -16,7 +16,7 @@ export default function CreatePost() {
         data.set('content',content)
         data.set('files',files[0])
         e.preventDefault()
-        const response = await fetch('http://localhost:4000/post',{
+        const response = await fetch('https://mycarblogbackend02072023.onrender.com/post',{
             method:"POST",
             body: data,
             headers:{"Access-Control-Allow-Headers":"*"},

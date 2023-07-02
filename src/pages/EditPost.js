@@ -31,7 +31,7 @@ export default function EditPost() {
       data.set("files", files?.[0]);
     }
 
-    const response = await fetch(`http://localhost:4000/post`, {
+    const response = await fetch(`https://mycarblogbackend02072023.onrender.com/post`, {
       method: "PUT",
       body: data,
       headers:{"Access-Control-Allow-Headers":"*"},
