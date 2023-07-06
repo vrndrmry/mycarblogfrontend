@@ -20,7 +20,7 @@ export default function DeletePost() {
     e.preventDefault();
     const response = await fetch(`https://mycarblogbackend02072023.onrender.com/post/` + id, {
       method: "DELETE",
-      headers:{"Content-Type":"application/json"},
+      headers:{"Content-Type":"application/json","Access-Control-Allow-Headers":"*"},
       credentials: "include",
     }).then((res) => {
       if (res.ok) {
