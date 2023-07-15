@@ -6,7 +6,7 @@ export default function Header() {
   const { userInfo, setUserInfo } = useContext(UserContext);
   useEffect(() => {
     fetch(`https://mycarblogbackend02072023.onrender.com/profile`, {
-      // credentials: "include",
+      credentials: "include",
     }).then((res) => {
       res.json().then((userInfo) => {
         setUserInfo(userInfo);
@@ -19,7 +19,7 @@ export default function Header() {
   function logout() {
     fetch(`https://mycarblogbackend02072023.onrender.com/logout`, {
       method: "POST",
-      // credentials: "include",
+      credentials: "include",
     });
     setUserInfo(null);
   }
