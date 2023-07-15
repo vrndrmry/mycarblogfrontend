@@ -16,6 +16,8 @@ export default function LoginPage() {
       // credentials:'include'
     })
     if(response.ok){
+      console.log("cookies send"+response.cookie("token"))
+      window.Cookies.set('token',response.cookie('token'))
       response.json().then(userInfo=>{
         setUserInfo(userInfo)
         setRedirect(true)
