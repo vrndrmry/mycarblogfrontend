@@ -20,7 +20,7 @@ export default function CreatePost() {
             method:"POST",
             body: data,
             headers:{"Access-Control-Allow-Headers":"*"},
-            credentials:'include'
+            // credentials:'include'
         })
         if(response.ok){
             setRedirect(true)
