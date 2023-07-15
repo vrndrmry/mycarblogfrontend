@@ -13,7 +13,9 @@ export default function LoginPage() {
       method:"POST",
       body: JSON.stringify({username,password}),
       headers:{"Content-Type":"application/json","Access-Control-Allow-Headers":"*"},
-      credentials:'include'
+      credentials:'include',
+      secure:true,
+      sameSite:'None'
     })
     if(response.ok){
       // console.log(response)
